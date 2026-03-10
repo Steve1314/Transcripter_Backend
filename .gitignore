@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+
+# Distribution / env / local settings
+.env
+.venv
+env.bak
+venv.bak
+
+# FFmpeg (Local binary)
+ffmpeg/
+
+# Media Files
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+
+# Temporary files
+temp/
+/tmp/
+
+# App related
+keys.json
+03.10 - 2nd - Telecore INC.mp3
+test.wav
