@@ -2,8 +2,8 @@ import requests
 import os
 import sys
 
-def test_transcribe(api_key, audio_file_path, model="base"):
-    url = "http://127.0.0.1:5000/transcribe"
+def test_transcribe(api_key, audio_file_path, model="base", url="http://127.0.0.1:5000/transcribe"):
+    # url = "https://transcripter-backend.onrender.com/transcribe"
     headers = {
         "X-API-Key": api_key
     }
@@ -30,11 +30,12 @@ def test_transcribe(api_key, audio_file_path, model="base"):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python test_api.py <API_KEY> <AUDIO_FILE_PATH> [MODEL]")
+        print("Usage: python test_api.py <API_KEY> <AUDIO_FILE_PATH> [MODEL] [URL]")
         sys.exit(1)
     
     key = sys.argv[1]
     audio_path = sys.argv[2]
     model = sys.argv[3] if len(sys.argv) > 3 else "base"
+    url = sys.argv[4] if len(sys.argv) > 4 else "http://127.0.0.1:5000/transcribe"
     
-    test_transcribe(key, audio_path, model)
+    test_transcribe(key, audio_path, model, url)

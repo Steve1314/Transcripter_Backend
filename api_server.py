@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 import json
 from werkzeug.utils import secure_filename
@@ -8,6 +9,7 @@ import tempfile
 import subprocess
 
 app = Flask(__name__)
+CORS(app)  # This will enable CORS for all routes
 KEYS_FILE = "keys.json"
 
 def get_ffmpeg_path():
